@@ -14,4 +14,6 @@ public class AppUsers // in EF AppUser will be a table in the database
   public required string username { get; set; }
   public required string emailId { get; set; }
   public required string gender { get; set; }
+  public required byte[] PasswordHash { get; set; }
+  public required byte[] PasswordSalt { get; set; }
 }
