@@ -4,10 +4,8 @@ using api.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers;
-
-[ApiController]
-[Route("api/[controller]")] // http://localhost:5000/api/users. this is the route to access this controller
-public class UsersController : ControllerBase
+ // http://localhost:5000/api/users. this is the route to access this controller
+public class UsersController : BaseApiController
 {
 
   // DataContext is a service that is injected into this controller
