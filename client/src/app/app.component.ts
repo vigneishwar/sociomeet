@@ -12,12 +12,13 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Socio Meet';
   http = inject(HttpClient);
+  users: any;
 
   ngOnInit() {
     this.http.get('https://localhost:5001/api/users').subscribe({
-      next: (data) => console.log(data),
+      next: (users) => this.users = users,
       error: (err) => console.error(err),
-      complete: () => console.log('Complete')
+      complete: () => console.log('done')
     })
   }
 }
